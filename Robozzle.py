@@ -13,7 +13,7 @@ class Game():
         
             if moves[i] == 'f':
                 interestingStarPosition = ( interestingStarPosition[0] + 1, interestingStarPosition[1])
-                if (len(self.starsPositions) > i and self.starsPositions[i] == interestingStarPosition):
+                if interestingStarPosition in self.starPositions:
                     numberOfStars += 1
 
 
