@@ -12,7 +12,7 @@ class Game():
             if self.starsPositions == [(1,0)]:
                 return 1
 
-        if moves[0] == 'f' and moves[1] == 'f':
+        if len(moves) > 1 and moves[0] == 'f' and moves[1] == 'f':
             if self.starsPositions == [(1,0),(2,0)]:
                 return 2
 
