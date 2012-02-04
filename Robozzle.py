@@ -10,8 +10,7 @@ class Game():
             return 0
         
         if moves[0] == 'f' and self.starsPositions[0] == (1,0):
-            if len(self. starsPositions) == 1:
-                numberOfStars += 1
+            numberOfStars += 1
 
             if len(moves) > 1 and  moves[1] == 'f' and len(self.starsPositions) > 1 and self.starsPositions[1] == (2,0):
                 if len(self.starsPositions) == 2:
