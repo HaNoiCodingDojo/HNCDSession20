@@ -17,7 +17,7 @@ class Game():
             if (len(moves) > 1 and  moves[1] == 'f'):
                 shipPosition = (2,0)
                 if (len(self.starsPositions) > 1 and self.starsPositions[1] == shipPosition):
-                numberOfStars += 1
+                    numberOfStars += 1
 
         return numberOfStars
         
