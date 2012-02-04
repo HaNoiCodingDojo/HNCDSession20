@@ -24,5 +24,12 @@ class RobozzleTest(unittest.TestCase):
         numberOfStarGot = game.move("f")
         self.assertEquals( len(starsPosition), numberOfStarGot)
 
+    def test_0_move_1_star( self ):
+        starsPosition = [ (1,0) ]
+        game = Game( starsPosition)
+        numberOfStarGot = game.move("")
+        self.assertEquals( 0, numberOfStarGot)
+
+
 if __name__ == "__main__":
     unittest.main()
