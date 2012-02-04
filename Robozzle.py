@@ -11,7 +11,6 @@ class Game():
             if (len(moves)>i and moves[i] == 'f') and ( len( self.starsPositions) > i and self.starsPositions[i] == (i+1,0)):
                 numberOfStars += 1
 
-
         return numberOfStars
         
 class RobozzleTest(unittest.TestCase):
