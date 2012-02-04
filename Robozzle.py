@@ -7,11 +7,10 @@ class Game():
     def move( self, moves ):
         numberOfStars = 0
         
-        if (len(moves)>0 and moves[0] == 'f') and (len(self.starsPositions) > 0 and self.starsPositions[0] == (1,0)):
-            numberOfStars += 1
-
-            if (len(moves) > 1 and  moves[1] == 'f') and (len(self.starsPositions) > 1 and self.starsPositions[1] == (2,0)):
+        for i in range(2): # 0, 1
+            if (len(moves)>i and moves[i] == 'f') and ( len( self.starsPositions) > i and self.starsPositions[i] == (i+1,0)):
                 numberOfStars += 1
+
 
         return numberOfStars
         
