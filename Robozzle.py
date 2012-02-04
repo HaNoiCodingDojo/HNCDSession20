@@ -6,7 +6,7 @@ class Game():
 
     def move( self, moves ):
         
-        if moves[0] == 'f':
+        if len(moves) > 0 and moves[0] == 'f':
             if self.starsPositions == [(1,0)]:
                 return 1
             else:
