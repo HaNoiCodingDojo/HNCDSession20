@@ -1,6 +1,11 @@
 import unittest
 
+class Game():
+    def __init__( self, starsPosition ):
+        self.starsPosition = starsPosition
 
+    def move( self, moves ):
+        return 0
 
 class RobozzleTest(unittest.TestCase):
 
