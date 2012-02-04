@@ -8,16 +8,14 @@ class Game():
         numberOfStars = 0
 
         interestingStarPosition = (0,0)
-        
-        if (len(moves)>0 and moves[0] == 'f'):
-            interestingStarPosition = ( interestingStarPosition[0] + 1, interestingStarPosition[1])
-            if (len(self.starsPositions) > 0 and self.starsPositions[0] == interestingStarPosition):
-                numberOfStars += 1
 
-            if (len(moves) > 1 and  moves[1] == 'f'):
+        for i in range( 2 ): # 0, 1
+        
+            if (len(moves)>i and moves[i] == 'f'):
                 interestingStarPosition = ( interestingStarPosition[0] + 1, interestingStarPosition[1])
-                if (len(self.starsPositions) > 1 and self.starsPositions[1] == interestingStarPosition):
+                if (len(self.starsPositions) > i and self.starsPositions[i] == interestingStarPosition):
                     numberOfStars += 1
+
 
         return numberOfStars
         
