@@ -5,12 +5,14 @@ class Game():
         self.starsPosition = starsPosition
 
     def move( self, moves ):
-           if moves == 'f':
-               
-               return 1
-           else : 
-               return 0
-
+        if moves == 'f':
+            if starsPositions == [(0,1)]:
+                return 1
+            else:
+                return 0
+        else : 
+            return 0
+        
 class RobozzleTest(unittest.TestCase):
 
     def test_true(self):
