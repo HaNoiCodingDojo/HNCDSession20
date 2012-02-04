@@ -5,7 +5,7 @@ class Game():
         self.starsPosition = starsPosition
 
     def move( self, moves ):
-        return len(starsPosition)
+        return len(self.starsPosition)
 
 class RobozzleTest(unittest.TestCase):
 
