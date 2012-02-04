@@ -9,9 +9,9 @@ class Game():
 
         interestingStarPosition = (0,0)
 
-        for i in range( 2 ): # 0, 1
+        for i in range( len(moves) ): # 0, 1
         
-            if (len(moves)>i and moves[i] == 'f'):
+            if moves[i] == 'f':
                 interestingStarPosition = ( interestingStarPosition[0] + 1, interestingStarPosition[1])
                 if (len(self.starsPositions) > i and self.starsPositions[i] == interestingStarPosition):
                     numberOfStars += 1
