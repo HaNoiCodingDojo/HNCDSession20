@@ -8,7 +8,7 @@ class RobozzleTest(unittest.TestCase):
         self.assertEquals(True, True)
 
     def test_0_move_0_star(self):
-        starsPosition=[,]
+        starsPosition=[]
         game = Game(starsPosition)
         numberOfStarGot = game.move("")
         self.assertEquals(len(starsPosition),numberOfStarGot)
