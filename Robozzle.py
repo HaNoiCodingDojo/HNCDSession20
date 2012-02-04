@@ -17,7 +17,7 @@ class Game():
                 if len(self.starsPositions) == 2:
                     return 2
 
-        return 0
+        return numberOfStars
         
 class RobozzleTest(unittest.TestCase):
 
