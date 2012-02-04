@@ -66,6 +66,12 @@ class RobozzleTest(unittest.TestCase):
         numberOfStarGot = game.move( "ff" )
         self.assertEquals(2, numberOfStarGot)
 
+    def test_2_move_2_star_reversed_2_starsgot( self ):
+        starsPositions = [ (2,0), (1,0) ]
+        game = Game( starsPositions )
+        numberOfStarGot = game.move( "ff" )
+        self.assertEquals(2, numberOfStarGot)
+
  
 if __name__ == "__main__":
     unittest.main()
