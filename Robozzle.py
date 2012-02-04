@@ -1,12 +1,12 @@
 import unittest
 
 class Game():
-    def __init__( self, starsPosition ):
-        self.starsPosition = starsPosition
+    def __init__( self, starsPositions):
+        self.starsPositions = starsPositions
 
     def move( self, moves ):
         if moves == 'f':
-            if self.starsPosition == [(1,0)]:
+            if self.starsPositions == [(1,0)]:
                 return 1
             else:
                 return 0
@@ -19,26 +19,26 @@ class RobozzleTest(unittest.TestCase):
         self.assertEquals(True, True)
 
     def test_0_move_0_star(self):
-        starsPosition=[]
-        game = Game(starsPosition)
+        starsPositions=[]
+        game = Game(starsPositions)
         numberOfStarGot = game.move("")
-        self.assertEquals(len(starsPosition),numberOfStarGot)
+        self.assertEquals(len(starsPositions),numberOfStarGot)
 
     def test_1_move_1_star(self):
-        starsPosition = [ (1,0) ]
-        game = Game( starsPosition)
+        starsPositions = [ (1,0) ]
+        game = Game( starsPositions)
         numberOfStarGot = game.move("f")
-        self.assertEquals( len(starsPosition), numberOfStarGot)
+        self.assertEquals( len(starsPositions), numberOfStarGot)
 
     def test_0_move_1_star( self ):
-        starsPosition = [ (1,0) ]
-        game = Game( starsPosition)
+        starsPositions = [ (1,0) ]
+        game = Game( starsPositions)
         numberOfStarGot = game.move("")
         self.assertEquals( 0, numberOfStarGot)
 
     def test_1_move_1_start( self ):
-        starsPosition = [ (-1,0)]
-        game = Game (starsPosition)
+        starsPositions = [ (-1,0)]
+        game = Game (starsPositions)
         numberOfStarGot = game.move("f")
         self.assertEquals(0, numberOfStarGot)
  
