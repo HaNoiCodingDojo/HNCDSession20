@@ -17,8 +17,8 @@ class Game():
 
         for i in range( len(moves) ): # 0, 1
             interestingStarPosition = self.newPosition( interestingStarPosition, moves[i] )
-
-            if interestingStarPosition in self.starsPositions:
+            if moves[i] == 'f':
+                if interestingStarPosition in self.starsPositions:
                 numberOfStars += 1
 
 
