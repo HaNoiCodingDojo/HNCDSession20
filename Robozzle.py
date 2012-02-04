@@ -10,6 +10,8 @@ class Game():
                 return 1
             else:
                 return 0
+        elif moves == 'fr':
+            return 1
         else : 
             return 0
         
