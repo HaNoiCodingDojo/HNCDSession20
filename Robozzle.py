@@ -12,13 +12,17 @@ class Game():
         if moves[0] == 'f' and self.starsPositions[0] == (1,0):
             if len(self. starsPositions) == 1:
                 return 1
-            
-        if len(moves) == 1:
-            return 0
 
-        if  moves[0] == 'f' and moves[1] == 'f' and  self.starsPositions[0] == (1,0) and self.starsPositions[1] == (2,0):
-            if len(self.starsPositions) == 2:
-                return 2
+            if len(moves) == 1:
+                return 0
+
+            if  moves[0] == 'f' and moves[1] == 'f' and  self.starsPositions[0] == (1,0) and self.starsPositions[1] == (2,0):
+                if len(self.starsPositions) == 2:
+                    return 2
+                
+        
+
+        
 
         return 0
         
