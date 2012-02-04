@@ -4,15 +4,20 @@ class Game():
     def __init__( self, starsPositions):
         self.starsPositions = starsPositions
 
+    def newPosition( self, currentPosition, move ):
+        pos = currentPosition
+        if move == 'f':
+            pos = ( pos[0] + 1, pos[1])
+        return pos
+
     def move( self, moves ):
         numberOfStars = 0
 
         interestingStarPosition = (0,0)
 
         for i in range( len(moves) ): # 0, 1
-        
-            if moves[i] == 'f':
-                interestingStarPosition = ( interestingStarPosition[0] + 1, interestingStarPosition[1])
+            interestingStarPosition = self.newPosition( interestingStarPosition, moves[i] )
+
                 if interestingStarPosition in self.starsPositions:
                     numberOfStars += 1
 
